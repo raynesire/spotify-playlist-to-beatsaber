@@ -41,12 +41,12 @@ def downloadMap(hash, location):
         zip.extractall(path[:-4])
     os.remove(path)
 
-sp = spotipy.Spotify(auth_manager = SpotifyOAuth(client_id="your client id",
-                                                 client_secret="your client secret",
+sp = spotipy.Spotify(auth_manager = SpotifyOAuth(client_id="8abbcf66dc7144e28b069f231f55ddb2",
+                                                 client_secret="3eb87cb8aaa649189ef234020da54091",
                                                  redirect_uri="http://localhost:8080",
                                                  scope="user-library-read"))
 
-playlistID = "37i9dQZF1DX7e8TjkFNKWH"
+playlistID = "2xnhaHktybGcwbwM8Tp0r3"
 resultsRaw = sp.playlist_tracks('spotify:playlist:{}'.format(playlistID))
 results = resultsRaw["items"]
 total = 100
